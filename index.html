@@ -1,20 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href='https://fonts.googleapis.com/css?family=Qwigley' rel='stylesheet'>
+
+<style>
+
+.main {
+    text-align: center;
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    font-family: Qwigley;
+    font-size: 3vw
+}
+.inputs {
+  font-size: 1vw;
+}
+.buttons {
+  font-size: 1vw;
+}
+
+@media screen and (max-width: 800px) {
+  .main {
+    font-size: 6.4vw    
+  }
+  .inputs {
+    font-size: 2.5vw
+  }
+  .buttons {
+    font-size: 2.5vw;
+  }
+}
+</style>
 
 </head>
 <body>
 
-<div style="text-align:center; font-family:Qwigley; font-size:3.2vw">
+<!-- <div style="text-align:center; font-family:Qwigley; font-size:3.2vw"> -->
+<div class=main>
+
 <h1 style="margin: 2px">RSVP Form Access</h1>
 <p style="margin: 0px">Please put in your RSVP code</p>
-<input type="text" id="myText" value="" size="10vw">
+<input type="text" id="myText" value="" size="10" class=inputs>
 
-<button onclick="myFunction()" style="width: 5vw;">Submit</button>
+<!-- <button onclick="myFunction()" style="width: 5%;">Submit</button> -->
+<!-- <button onclick="myFunction()" style="padding: 0.1vw 2vw;">Submit</button> -->
+<!-- <button onclick="myFunction()">Submit</button> -->
+<input type="submit" value="Submit" onclick="myFunction()" class=buttons/>
+
 
 <p id="result"></p>
+
 </div>
 
 <script>
