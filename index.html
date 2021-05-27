@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
+<link href='https://fonts.googleapis.com/css?family=Qwigley' rel='stylesheet'>
+
 <body>
 
-<h3>RSVP Form Access</h3>
-
+<div style="text-align:center; font-family:Qwigley; font-size:250%">
+<h1 style="margin: 2px">RSVP Form Access</h1>
+<p style="margin: 0px">Please put in your RSVP code</p>
 <input type="text" id="myText" value="">
-
-<p>Please put in your RSVP code</p>
 
 <button onclick="myFunction()">Submit</button>
 
-<p id="correct"></p>
-<p id="wrong" style="color:red;"> </p>
-
+<p id="result"></p>
+</div>
 
 <script>
 function myFunction() {
@@ -21,15 +21,18 @@ function myFunction() {
   var friend_code = 'zpwedding';
 
   if (x == family_code){
-    document.getElementById("correct").innerHTML = "correct";
+    document.getElementById("result").innerHTML = "Correct";
+    document.getElementById("result").style.color = "black";
     window.open("https://docs.google.com/forms/d/e/1FAIpQLSe3mU3EdiP8MmF4nQehuDxFkJUqE6mrYGa-qZg39xMWfL-kTg/viewform?usp=sf_link")
   }
   else if (x == friend_code){
-    document.getElementById("correct").innerHTML = "correct";
+    document.getElementById("result").innerHTML = "Correct";
+    document.getElementById("result").style.color = "black";
     window.open("https://docs.google.com/forms/d/e/1FAIpQLSdKAGer6_m76TbCPk6i-oydP00Tac9jxeNg8SL7LjT9yd_N4w/viewform?usp=sf_link")
   }
   else{
-    document.getElementById("wrong").innerHTML = "Wrong code please try again. Make sure you have the correct uppercasing.";
+    document.getElementById("result").innerHTML = "Wrong code please try again. Make sure you have the correct uppercasing.";
+    document.getElementById("result").style.color = "red";
   }
 }
 </script>
