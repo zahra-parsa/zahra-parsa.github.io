@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href='https://fonts.googleapis.com/css?family=Qwigley' rel='stylesheet'>
+
+<style>
+
+.main {
+    text-align: center;
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    font-family: Qwigley;
+    font-size: 3vw
+}
+.inputs {
+  font-size: 1vw;
+}
+.buttons {
+  font-size: 1vw;
+}
+
+@media screen and (max-width: 800px) {
+  .main {
+    font-size: 6.4vw    
+  }
+  .inputs {
+    font-size: 2.5vw
+  }
+  .buttons {
+    font-size: 2.5vw;
+  }
+}
+</style>
+
+</head>
+<body>
+
+<!-- <div style="text-align:center; font-family:Qwigley; font-size:3.2vw"> -->
+<div class=main>
+
+<h1 style="margin: 2px">RSVP Form Access</h1>
+
+<input type="submit" value="Event Details" onclick="event_open()" class=buttons/>
+<input type="submit" value="RSVP Here" onclick="rsvp_open()" class=buttons/>
+
+
+<p id="result"></p>
+
+</div>
+
+<script>
+function event_open() {
+  window.open("./_details.html")
+}
+function rsvp_open() {
+  window.open("https://docs.google.com/forms/d/e/1FAIpQLSdDZmILSb10DxRnwREYAvcGqHU829StFhl0Sivs2uNJ4l5IsA/viewform?usp=sf_link")
+}
+
+</script>
+
+</body>
+</html>
+
